@@ -4,14 +4,15 @@
             <% @todos.each do |todo| %>
                 <li>
                     <input type="checkbox" name=""/>
-                    <a href="show/<%= todo.id %>"><%= todo.description %></a>
+                    <a href="/todo/show/<%= todo.id %>"><%= todo.description %></a>
                     <span class="pomodoro-estimate small-pomodoro-estimate"><%= todo.pomodoro_estimate %></span>
                 </li>
             <% end %>    
         </ol>
-        
-        <input type="text" placeholder="create to todo list">
-        <input type="number" placeholder="number of pomodoros">
+        <form action="/todo/create">
+        <input type="text" placeholder="create to todo list" name="description">
+        <input type="number" placeholder="number of pomodoros" name="pomodoro_estimate">
         <input id="add-new-todo-button" type="submit" value="add todo">
+        </form>
         
 </body>

@@ -3,13 +3,12 @@
  Workshop Todo List
 </h1>
 
-<%= @todo.id %>
 <div class="card">
     <input type="checkbox" name=""/>
-    <h2><%= @todo_description%></h2>
-    <span class="pomodoro-estimate large-pomodoro-estimate"><%= @todo_pomodoro_estimate%> Pomodoros</span>
+    <h2><%= @todo.description%></h2>
+    <span class="pomodoro-estimate large-pomodoro-estimate"><%= @todo.pomodoro_estimate%> Pomodoros</span>
     <a href="/todo/edit/<%= @todo.id %>" class="button" id="edit-todo-button">Edit</a>
-    <a href="#" class="button" id="delete-todo-button">Delete</a>
-    <a /href="/todo/index" class="simple-link">Go back...</a>
+    <a href="/todo/destroy/<%= @todo.id %>" class="button" id="delete-todo-button">Delete</a>
+    <a href="/" class="simple-link">Go back...</a>
 </div>
 
